@@ -235,3 +235,27 @@ PARTNERS
     }
 
 }
+
+/*=====================================
+REVIEWS
+=====================================*/
+
+@media(max-width:992px){
+
+    .reviews-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .reviews-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

@@ -1,54 +1,46 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    exit("Доступ запрещен.");
+    header("Location: ../index.html");
+    exit;
 }
 
-// Получение данных из формы
 $name = trim($_POST["name"] ?? "");
 $phone = trim($_POST["phone"] ?? "");
 $email = trim($_POST["email"] ?? "");
 $message = trim($_POST["message"] ?? "");
 
-// =========================
-// Укажите вашу почту
-// =========================
-
-$to = "maxefik705@gmail.com"; // Замените на свою почту
+$to = "maxefik705@gmail.com";   // ← сюда приходит заявка
 
 $subject = "Новая заявка с сайта VVV GROUP";
 
 $text = "
-Новая заявка с сайта
+Новая заявка с сайта VVV GROUP
 
 Имя: $name
 
 Телефон: $phone
 
-Email: $email
+E-mail: $email
 
 Сообщение:
 $message
 ";
 
-$headers = "From: no-reply@vvvgroup.ru\r\n";
+$headers = "From: VVV GROUP <no-reply@vvv-group.ru>\r\n";
+$headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-// Отправка письма
 if (mail($to, $subject, $text, $headers)) {
 
-    echo "<script>
-        alert('Спасибо! Ваша заявка успешно отправлена.');
-        window.history.back();
-    </script>";
+    header("Location: ../index.html?success=1");
 
 } else {
 
-    echo "<script>
-        alert('Ошибка отправки. Попробуйте позже.');
-        window.history.back();
-    </script>";
+    header("Location: ../index.html?error=1");
 
 }
+
+exit;
 
 ?>

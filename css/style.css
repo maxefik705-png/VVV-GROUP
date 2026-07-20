@@ -831,3 +831,103 @@ PARTNERS
     transform:translateY(-6px);
 
 }
+
+/*=====================================
+REVIEWS
+=====================================*/
+
+.reviews{
+
+    padding:120px 0;
+
+    background:#050505;
+
+}
+
+.reviews-text{
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.review-card{
+
+    background:#111;
+
+    border:1px solid rgba(205,164,94,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    transition:.35s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 40px rgba(205,164,94,.15);
+
+}
+
+.stars{
+
+    font-size:26px;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.review-card p{
+
+    color:#d4d4d4;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+.review-card h4{
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+
+    font-size:20px;
+
+}
+
+.review-card span{
+
+    color:#999;
+
+    font-size:15px;
+
+}

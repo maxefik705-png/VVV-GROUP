@@ -1379,3 +1379,67 @@ ANIMATIONS
     transform:translateY(0);
 
 }
+
+/*=====================================
+PRIVACY
+=====================================*/
+
+.privacy{
+
+    padding:140px 0 100px;
+
+    background:#080808;
+
+    min-height:100vh;
+
+}
+
+.privacy-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#111111;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.15);
+
+}
+
+.privacy-content h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:var(--gold);
+
+}
+
+.privacy-content p,
+
+.privacy-content li{
+
+    color:#d4d4d4;
+
+    line-height:1.9;
+
+}
+
+.privacy-content ul{
+
+    padding-left:20px;
+
+    margin:20px 0;
+
+}
+
+.privacy-content a{
+
+    color:var(--gold);
+
+}

@@ -259,3 +259,17 @@ REVIEWS
     }
 
 }
+
+/*=====================================
+CONTACTS
+=====================================*/
+
+@media(max-width:768px){
+
+    .contacts-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

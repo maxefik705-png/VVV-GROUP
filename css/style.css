@@ -479,3 +479,79 @@ ABOUT
     font-size:18px;
 
 }
+
+/*=====================================
+SERVICES
+=====================================*/
+
+.services{
+
+    background:#050505;
+
+    padding:120px 0;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.service-card{
+
+    background:#111;
+
+    border:1px solid rgba(205,164,94,.2);
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    transition:.35s;
+
+    text-align:center;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 45px rgba(205,164,94,.15);
+
+}
+
+.service-icon{
+
+    font-size:50px;
+
+    margin-bottom:25px;
+
+}
+
+.service-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.service-card p{
+
+    color:#c9c9c9;
+
+    line-height:1.8;
+
+}

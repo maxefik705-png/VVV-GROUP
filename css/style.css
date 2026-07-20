@@ -583,3 +583,81 @@ SERVICES
     line-height:1.8;
 
 }
+
+/*=====================================
+ADVANTAGES
+=====================================*/
+
+.advantages{
+
+    background:#0b0b0b;
+
+    padding:120px 0;
+
+}
+
+.advantages-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.advantage-card{
+
+    background:#151515;
+
+    border:1px solid rgba(205,164,94,.2);
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.advantage-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 40px rgba(205,164,94,.15);
+
+}
+
+.advantage-card i{
+
+    font-size:42px;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.advantage-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.advantage-card p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}

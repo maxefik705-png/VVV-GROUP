@@ -1,0 +1,387 @@
+/* =====================================
+   VVV GROUP
+   ANIMATIONS
+===================================== */
+
+/* Плавное появление */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* Появление слева */
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+    transition:1s;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/* Появление справа */
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+    transition:1s;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/* Увеличение */
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    transition:1s;
+
+}
+
+.zoom.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+/* Hero */
+
+.hero-label{
+
+    animation:fadeDown 1s;
+
+}
+
+.hero h2{
+
+    animation:fadeLeft 1.3s;
+
+}
+
+.hero p{
+
+    animation:fadeLeft 1.6s;
+
+}
+
+.buttons{
+
+    animation:fadeUp 2s;
+
+}
+
+
+/* Keyframes */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+@keyframes fadeLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+@keyframes fadeRight{
+
+from{
+
+opacity:0;
+
+transform:translateX(70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+/* Hero Zoom */
+
+.hero-bg{
+
+    animation:heroZoom 20s linear infinite alternate;
+
+}
+
+@keyframes heroZoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+
+/* Карточки */
+
+.about-grid div,
+
+.mortgage-grid div,
+
+.steps-grid div,
+
+.partners div{
+
+    transition:.35s;
+
+}
+
+.about-grid div:hover,
+
+.mortgage-grid div:hover,
+
+.steps-grid div:hover,
+
+.partners div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/* Золотое свечение */
+
+.gold-btn:hover,
+
+.call-btn:hover{
+
+    animation:goldPulse 1s infinite alternate;
+
+}
+
+@keyframes goldPulse{
+
+from{
+
+box-shadow:0 0 10px rgba(205,164,94,.3);
+
+}
+
+to{
+
+box-shadow:0 0 35px rgba(205,164,94,.8);
+
+}
+
+}
+
+
+/* Логотип */
+
+.logo{
+
+    animation:logoFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-4px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* Кнопки WhatsApp/Telegram */
+
+.social-fixed a{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/* Loader */
+
+.loader{
+
+    animation:loaderFade 2s infinite;
+
+}
+
+@keyframes loaderFade{
+
+0%{
+
+opacity:.5;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.5;
+
+}
+
+}
+
+
+/* Плавный скролл карточек */
+
+.about-grid div,
+
+.steps-grid div,
+
+.partners div,
+
+.mortgage-grid div{
+
+    will-change:transform;
+
+}

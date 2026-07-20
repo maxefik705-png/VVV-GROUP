@@ -1,270 +1,34 @@
-/* =====================================
-   Адаптивность
-===================================== */
-
-/* Планшеты */
-
-@media (max-width: 992px) {
-
-    section {
-        padding: 80px 0;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-}
-
-/* Смартфоны */
-
-@media (max-width: 768px) {
-
-    section {
-        padding: 70px 0;
-    }
-
-    h2 {
-        font-size: 34px;
-        margin-bottom: 40px;
-    }
-
-    .gold-btn,
-    .black-btn {
-
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-
-    }
-
-}
-
-/* Маленькие смартфоны */
-
-@media (max-width: 480px) {
-
-    body {
-
-        font-size: 15px;
-
-    }
-
-    h2 {
-
-        font-size: 28px;
-
-    }
-
-    .container {
-
-        width: 94%;
-
-    }
-
-}
-
 /*=====================================
-HERO
+TABLETS
 =====================================*/
 
-@media(max-width:768px){
+@media (max-width:992px){
 
-.hero{
+    .container{
 
-    text-align:center;
+        width:90%;
 
-    min-height:90vh;
+    }
 
-}
+    .hero{
 
-.hero h1{
+        text-align:center;
 
-    font-size:46px;
+    }
 
-}
+    .hero-content{
 
-.hero p{
+        margin:auto;
 
-    font-size:18px;
+    }
 
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-}
-
-/*=====================================
-ABOUT
-=====================================*/
-
-@media(max-width:992px){
-
-.about-wrapper{
-
-    flex-direction:column;
-
-}
-
-.about-stats{
-
-    flex-direction:column;
-
-}
-
-/*=====================================
-ABOUT
-=====================================*/
-
-@media(max-width:768px){
-
-    .stats{
+    .about-wrapper{
 
         grid-template-columns:1fr;
 
-    }
-
-    .about-text{
-
-        font-size:18px;
+        gap:50px;
 
     }
-
-}
-
-/*=====================================
-SERVICES
-=====================================*/
-
-@media(max-width:992px){
-
-    .services-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .services-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/*=====================================
-ADVANTAGES
-=====================================*/
-
-@media(max-width:992px){
-
-    .advantages-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .advantages-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/*=====================================
-WORK STEPS
-=====================================*/
-
-@media(max-width:992px){
-
-    .steps-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .steps-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/*=====================================
-PARTNERS
-=====================================*/
-
-@media(max-width:992px){
-
-    .partners-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .partners-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/*=====================================
-REVIEWS
-=====================================*/
-
-@media(max-width:992px){
-
-    .reviews-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .reviews-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/*=====================================
-CONTACTS
-=====================================*/
-
-@media(max-width:768px){
 
     .contacts-wrapper{
 
@@ -272,15 +36,95 @@ CONTACTS
 
     }
 
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
 }
 
 /*=====================================
-FOOTER
+SMARTPHONES
 =====================================*/
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .footer-top{
+    section{
+
+        padding:80px 0;
+
+    }
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    h2{
+
+        font-size:32px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+    .hero{
+
+        min-height:90vh;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero-buttons .gold-btn,
+
+    .hero-buttons .transparent-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .about-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .services-grid,
+
+    .steps-grid,
+
+    .partners-grid,
+
+    .reviews-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
 
         grid-template-columns:1fr;
 
@@ -288,9 +132,9 @@ FOOTER
 
     }
 
-    .footer-logo img{
+    .footer-logo{
 
-        margin:0 auto 20px;
+        margin:0 auto 25px;
 
     }
 
@@ -299,6 +143,108 @@ FOOTER
         flex-direction:column;
 
         text-align:center;
+
+    }
+
+}
+
+/*=====================================
+SMALL SMARTPHONES
+=====================================*/
+
+@media (max-width:480px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+        line-height:1.2;
+
+    }
+
+    h2{
+
+        font-size:28px;
+
+    }
+
+    .section-title{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-title p{
+
+        font-size:15px;
+
+    }
+
+    .service-card,
+
+    .step-card,
+
+    .partner-card,
+
+    .review-card,
+
+    .contact-card,
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+    .stat-card{
+
+        padding:25px;
+
+    }
+
+    .stat-card h3{
+
+        font-size:34px;
+
+    }
+
+    .contact-form input,
+
+    .contact-form textarea{
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+    .gold-btn,
+
+    .transparent-btn{
+
+        width:100%;
+
+        padding:16px 20px;
+
+        font-size:16px;
+
+    }
+
+    .scroll-top{
+
+        width:48px;
+
+        height:48px;
+
+        right:20px;
+
+        bottom:20px;
 
     }
 

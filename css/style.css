@@ -757,3 +757,77 @@ WORK STEPS
     line-height:1.8;
 
 }
+
+/*=====================================
+PARTNERS
+=====================================*/
+
+.partners{
+
+    padding:120px 0;
+
+    background:#0b0b0b;
+
+}
+
+.partners-text{
+
+    max-width:800px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}
+
+.partners-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.partner-card{
+
+    height:110px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111;
+
+    border:1px solid rgba(205,164,94,.2);
+
+    border-radius:18px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+    transition:.35s;
+
+}
+
+.partner-card:hover{
+
+    background:var(--gold);
+
+    color:#000;
+
+    transform:translateY(-6px);
+
+}

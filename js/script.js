@@ -1,45 +1,51 @@
-/* ======================================
-   AJAX отправка формы
-====================================== */
+// ==============================
+// Плавная прокрутка по меню
+// ==============================
 
-const contactForm = document.getElementById("contactForm");
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-if (contactForm) {
+    link.addEventListener("click", function (e) {
 
-    contactForm.addEventListener("submit", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
 
-        e.preventDefault();
+        if (target) {
 
-        const formData = new FormData(contactForm);
+            e.preventDefault();
 
-        fetch("php/send.php", {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
 
-            method: "POST",
-
-            body: formData
-
-        })
-
-        .then(response => response.json())
-
-        .then(data => {
-
-            alert(data.message);
-
-            if (data.success) {
-
-                contactForm.reset();
-
-            }
-
-        })
-
-        .catch(() => {
-
-            alert("Ошибка соединения с сервером.");
-
-        });
+        }
 
     });
 
-}
+});
+
+// ==============================
+// Анимация появления блоков
+// ==============================
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+document.querySelectorAll("section").forEach(section => {
+
+    section.classList.add("hidden");
+
+    observer.observe(section);
+
+});

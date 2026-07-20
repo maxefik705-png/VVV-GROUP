@@ -661,3 +661,99 @@ ADVANTAGES
     line-height:1.8;
 
 }
+
+/*=====================================
+WORK STEPS
+=====================================*/
+
+.steps{
+
+    padding:120px 0;
+
+    background:#050505;
+
+}
+
+.steps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.step-card{
+
+    position:relative;
+
+    background:#111;
+
+    border:1px solid rgba(205,164,94,.2);
+
+    border-radius:20px;
+
+    padding:45px 30px 35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.step-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 40px rgba(205,164,94,.15);
+
+}
+
+.step-number{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:rgba(205,164,94,.4);
+
+}
+
+.step-card i{
+
+    font-size:46px;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.step-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.step-card p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}

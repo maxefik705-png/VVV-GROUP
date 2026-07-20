@@ -285,3 +285,101 @@ HERO
     flex-wrap:wrap;
 
 }
+
+/*=====================================
+ABOUT
+=====================================*/
+
+.about{
+
+    background:#0b0b0b;
+
+}
+
+.about-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text p{
+
+    margin-bottom:25px;
+
+    font-size:17px;
+
+    color:#cfcfcf;
+
+}
+
+.about-image{
+
+    flex:1;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    border:2px solid var(--gold);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+}
+
+.about-stats{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.stat-card{
+
+    flex:1;
+
+    background:#161616;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    border:1px solid rgba(205,164,94,.2);
+
+}
+
+.stat-card h3{
+
+    font-size:38px;
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card span{
+
+    color:#d0d0d0;
+
+}

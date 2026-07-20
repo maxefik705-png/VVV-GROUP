@@ -125,3 +125,105 @@ img{
     color:#000;
 
 }
+
+/*=====================================
+HEADER
+=====================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(5,5,5,.92);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(205,164,94,.15);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}
+
+.logo{
+
+    font-size:34px;
+
+    color:#fff;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:var(--gold);
+
+}
+
+.nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav a{
+
+    color:#fff;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.nav a:hover{
+
+    color:var(--gold);
+
+}
+
+.burger{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+.burger span{
+
+    width:28px;
+
+    height:3px;
+
+    background:#fff;
+
+    border-radius:5px;
+
+}

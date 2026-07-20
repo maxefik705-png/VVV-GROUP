@@ -67,3 +67,37 @@
     }
 
 }
+
+/*=====================================
+HERO
+=====================================*/
+
+@media(max-width:768px){
+
+.hero{
+
+    text-align:center;
+
+    min-height:90vh;
+
+}
+
+.hero h1{
+
+    font-size:46px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+}

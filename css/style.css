@@ -1,486 +1,49 @@
 /* =====================================
    VVV GROUP
-   PREMIUM REAL ESTATE WEBSITE
-   MAIN STYLE
+   Основные стили
 ===================================== */
 
+:root{
 
-/* ---------- RESET ---------- */
+    --gold:#CDA45E;
+    --black:#050505;
+    --dark:#111111;
+    --white:#ffffff;
+    --gray:#bfbfbf;
+
+}
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
 
-    background:#050505;
-
-    color:#ffffff;
-
-    font-family:'Montserrat', sans-serif;
-
+    font-family:'Montserrat',sans-serif;
+    background:var(--black);
+    color:var(--white);
+    line-height:1.7;
     overflow-x:hidden;
 
 }
 
-
-a{
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
-
 .container{
 
     width:90%;
-
-    max-width:1300px;
-
-    margin:auto;
+    max-width:1200px;
+    margin:0 auto;
 
 }
-
-
-
-/* ---------- VARIABLES ---------- */
-
-:root{
-
-    --gold:#cda45e;
-
-    --black:#050505;
-
-    --dark:#101010;
-
-    --gray:#999;
-
-}
-
-
-
-/* ---------- PRELOADER ---------- */
-
-
-#preloader{
-
-    position:fixed;
-
-    inset:0;
-
-    background:#050505;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    z-index:99999;
-
-    transition:.8s;
-
-}
-
-
-.loader{
-
-    text-align:center;
-
-}
-
-
-.loader h1{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:70px;
-
-    letter-spacing:10px;
-
-    color:var(--gold);
-
-}
-
-
-.loader span{
-
-    display:block;
-
-    margin-top:15px;
-
-    color:#aaa;
-
-    letter-spacing:6px;
-
-    font-size:13px;
-
-}
-
-
-
-/* ---------- HEADER ---------- */
-
-
-header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    padding:25px 0;
-
-    z-index:1000;
-
-    transition:.4s;
-
-}
-
-
-header.scrolled{
-
-    background:rgba(5,5,5,.95);
-
-    border-bottom:1px solid rgba(205,164,94,.3);
-
-    backdrop-filter:blur(15px);
-
-}
-
-
-header .container{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-
-
-/* LOGO */
-
-
-.logo h1{
-
-    color:var(--gold);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:38px;
-
-    letter-spacing:5px;
-
-}
-
-
-.logo span{
-
-    color:#aaa;
-
-    font-size:11px;
-
-    letter-spacing:6px;
-
-}
-
-
-
-/* MENU */
-
-
-#menu{
-
-    display:flex;
-
-    gap:35px;
-
-}
-
-
-#menu a{
-
-    color:#fff;
-
-    font-size:14px;
-
-    transition:.3s;
-
-    position:relative;
-
-}
-
-
-#menu a:after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    height:2px;
-
-    width:0;
-
-    background:var(--gold);
-
-    transition:.3s;
-
-}
-
-
-#menu a:hover{
-
-    color:var(--gold);
-
-}
-
-
-#menu a:hover:after{
-
-    width:100%;
-
-}
-
-
-
-/* PHONE BUTTON */
-
-
-.call-btn{
-
-    border:1px solid var(--gold);
-
-    padding:14px 28px;
-
-    border-radius:40px;
-
-    color:var(--gold);
-
-    transition:.3s;
-
-}
-
-
-.call-btn:hover{
-
-    background:var(--gold);
-
-    color:#000;
-
-}
-
-
-
-/* ---------- HERO ---------- */
-
-
-.hero{
-
-    height:100vh;
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-
-.hero-bg{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    z-index:-2;
-
-}
-
-
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    linear-gradient(
-
-    90deg,
-
-    rgba(0,0,0,.85),
-
-    rgba(0,0,0,.45)
-
-    );
-
-    z-index:-1;
-
-}
-
-
-
-.hero-content{
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-
-
-.hero-label{
-
-    color:var(--gold);
-
-    border:1px solid var(--gold);
-
-    display:inline-block;
-
-    padding:12px 25px;
-
-    border-radius:50px;
-
-    letter-spacing:3px;
-
-    margin-bottom:30px;
-
-    font-size:13px;
-
-}
-
-
-.hero h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:90px;
-
-    line-height:1;
-
-    margin-bottom:30px;
-
-}
-
-
-.hero h2 span{
-
-    color:var(--gold);
-
-}
-
-
-.hero p{
-
-    font-size:22px;
-
-    color:#ddd;
-
-    max-width:650px;
-
-    line-height:1.6;
-
-    margin-bottom:45px;
-
-}
-
-
-
-/* BUTTONS */
-
-
-.buttons{
-
-    display:flex;
-
-    gap:20px;
-
-}
-
-
-.gold-btn,
-.black-btn{
-
-    padding:18px 40px;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-}
-
-
-.gold-btn{
-
-    background:var(--gold);
-
-    color:#000;
-
-}
-
-
-.gold-btn:hover{
-
-    box-shadow:0 0 35px rgba(205,164,94,.5);
-
-}
-
-
-
-.black-btn{
-
-    border:1px solid #fff;
-
-}
-
-
-.black-btn:hover{
-
-    background:#fff;
-
-    color:#000;
-
-}
-/* =====================================
-   ABOUT SECTION
-===================================== */
-
 
 section{
 
@@ -488,564 +51,77 @@ section{
 
 }
 
-
-section h2{
-
-    text-align:center;
+h1,h2,h3{
 
     font-family:'Cormorant Garamond',serif;
-
-    font-size:60px;
-
-    margin-bottom:60px;
-
-    color:#fff;
-
-}
-
-
-section h2::after{
-
-    content:"";
-
-    display:block;
-
-    width:80px;
-
-    height:2px;
-
-    background:var(--gold);
-
-    margin:20px auto 0;
-
-}
-
-
-
-/* ---------- ABOUT ---------- */
-
-
-.about{
-
-    background:#080808;
-
-}
-
-
-.about > .container > p{
-
-    text-align:center;
-
-    max-width:800px;
-
-    margin:0 auto 60px;
-
-    color:#ccc;
-
-    font-size:18px;
-
-    line-height:1.8;
-
-}
-
-
-
-.about-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-
-.about-grid div{
-
-    background:#111;
-
-    padding:40px 30px;
-
-    border:1px solid rgba(205,164,94,.15);
-
-    transition:.4s;
-
-}
-
-
-
-.about-grid div:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--gold);
-
-}
-
-
-
-.about-grid h3{
-
-    color:var(--gold);
-
-    font-size:25px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-.about
-/* =====================================
-   MORTGAGE
-===================================== */
-
-.mortgage{
-
-    background:#050505;
-
-}
-
-.mortgage-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.mortgage-grid div{
-
-    background:#101010;
-
-    border:1px solid rgba(205,164,94,.15);
-
-    padding:50px 30px;
-
-    text-align:center;
-
-    transition:.35s;
-
-    border-radius:12px;
-
-}
-
-.mortgage-grid div:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--gold);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-
-}
-
-.mortgage-grid h3{
-
-    font-size:52px;
-
-    color:var(--gold);
-
-    margin-bottom:15px;
-
-    font-family:'Cormorant Garamond',serif;
-
-}
-
-.mortgage-grid p{
-
-    color:#d0d0d0;
-
-    font-size:18px;
-
-}
-
-/* =====================================
-   PARTNERS
-===================================== */
-
-.partners{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
-    margin-top:50px;
-
-}
-
-.partners div{
-
-    background:#111;
-
-    border:1px solid rgba(205,164,94,.15);
-
-    border-radius:12px;
-
-    padding:35px;
-
-    text-align:center;
-
-    color:#fff;
-
-    font-size:22px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.partners div:hover{
-
-    background:var(--gold);
-
-    color:#000;
-
-    transform:scale(1.05);
-
-}
-
-/* =====================================
-   STEPS
-===================================== */
-
-.steps{
-
-    background:#080808;
-
-}
-
-.steps-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-}
-
-.steps-grid div{
-
-    background:#111;
-
-    padding:30px;
-
-    border-left:4px solid var(--gold);
-
-    border-radius:10px;
-
-    color:#fff;
-
-    font-size:18px;
-
-    transition:.35s;
-
-    min-height:120px;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-.steps-grid div:hover{
-
-    transform:translateY(-8px);
-
-    background:#181818;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.3);
-
-}
-/* =====================================
-   CONTACTS
-===================================== */
-
-.contacts{
-
-    background:#050505;
-
-}
-
-.contacts .container{
-
-    max-width:900px;
-
-}
-
-.contacts form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
-    margin-top:50px;
-
-}
-
-.contacts input,
-.contacts textarea{
-
-    width:100%;
-
-    padding:20px 25px;
-
-    background:#111;
-
-    border:1px solid rgba(205,164,94,.2);
-
-    color:#fff;
-
-    font-size:16px;
-
-    border-radius:10px;
-
-    transition:.3s;
-
-}
-
-.contacts input:focus,
-.contacts textarea:focus{
-
-    outline:none;
-
-    border-color:var(--gold);
-
-    box-shadow:0 0 20px rgba(205,164,94,.2);
-
-}
-
-.contacts textarea{
-
-    min-height:180px;
-
-    resize:vertical;
-
-}
-
-.contacts button{
-
-    width:260px;
-
-    height:60px;
-
-    background:var(--gold);
-
-    color:#000;
-
-    border:none;
-
-    border-radius:40px;
-
-    font-size:17px;
-
     font-weight:700;
 
-    cursor:pointer;
-
-    transition:.35s;
-
 }
 
-.contacts button:hover{
+h2{
 
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(205,164,94,.35);
-
-}
-
-/* =====================================
-   FOOTER
-===================================== */
-
-footer{
-
-    background:#080808;
-
-    border-top:1px solid rgba(205,164,94,.2);
-
-    padding:70px 0 30px;
-
-}
-
-footer h2{
-
+    font-size:48px;
+    text-align:center;
     color:var(--gold);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:42px;
-
-    text-align:center;
-
-    margin-bottom:20px;
+    margin-bottom:60px;
 
 }
 
-footer p{
+p{
 
-    color:#999;
-
-    text-align:center;
-
-    font-size:15px;
+    color:var(--gray);
 
 }
 
-/* =====================================
-   FIXED SOCIAL BUTTONS
-===================================== */
+a{
 
-.social-fixed{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-    z-index:9999;
+    text-decoration:none;
 
 }
 
-.social-fixed a{
+img{
 
-    width:60px;
-
-    height:60px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#fff;
-
-    font-size:24px;
-
-    transition:.3s;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    max-width:100%;
+    display:block;
 
 }
 
-.whatsapp{
+/* ===========================
+   Кнопки
+=========================== */
 
-    background:#25D366;
+.gold-btn{
 
-}
-
-.telegram{
-
-    background:#229ED9;
-
-}
-
-.social-fixed a:hover{
-
-    transform:scale(1.1);
-
-}
-
-/* =====================================
-   SCROLL TO TOP
-===================================== */
-
-#toTop{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:170px;
-
-    width:55px;
-
-    height:55px;
-
+    display:inline-block;
+    padding:16px 38px;
     background:var(--gold);
-
     color:#000;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    cursor:pointer;
-
-    opacity:0;
-
-    visibility:hidden;
-
+    font-weight:600;
+    border-radius:40px;
     transition:.3s;
 
-    font-size:22px;
+}
 
-    font-weight:bold;
+.gold-btn:hover{
 
-    z-index:9998;
+    transform:translateY(-3px);
 
 }
 
-#toTop.show{
+.black-btn{
 
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-/* =====================================
-   CUSTOM SCROLLBAR
-===================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
+    display:inline-block;
+    padding:16px 38px;
+    border:2px solid var(--gold);
+    color:var(--gold);
+    border-radius:40px;
+    transition:.3s;
 
 }
 
-::-webkit-scrollbar-track{
-
-    background:#080808;
-
-}
-
-::-webkit-scrollbar-thumb{
+.black-btn:hover{
 
     background:var(--gold);
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#e0b76b;
+    color:#000;
 
 }

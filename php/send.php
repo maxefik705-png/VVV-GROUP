@@ -1,66 +1,54 @@
 <?php
 
-header('Content-Type: application/json; charset=utf-8');
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    exit;
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    exit("Доступ запрещен.");
 }
 
-$name = htmlspecialchars(trim($_POST['name'] ?? ''));
-$phone = htmlspecialchars(trim($_POST['phone'] ?? ''));
-$email = htmlspecialchars(trim($_POST['email'] ?? ''));
-$message = htmlspecialchars(trim($_POST['message'] ?? ''));
+// Получение данных из формы
+$name = trim($_POST["name"] ?? "");
+$phone = trim($_POST["phone"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$message = trim($_POST["message"] ?? "");
 
-if (empty($name) || empty($phone)) {
+// =========================
+// Укажите вашу почту
+// =========================
 
-    echo json_encode([
-        "success" => false,
-        "message" => "Заполните обязательные поля."
-    ]);
-
-    exit;
-}
-
-/* ==========================
-   НАСТРОЙКИ
-========================== */
-
-$to = "maxefik705@gmail.com"; // Укажите вашу почту
+$to = "maxefik705@gmail.com"; // Замените на свою почту
 
 $subject = "Новая заявка с сайта VVV GROUP";
 
-/* ========================== */
-
 $text = "
-Новая заявка с сайта VVV GROUP
+Новая заявка с сайта
 
 Имя: $name
 
 Телефон: $phone
 
-E-mail: $email
+Email: $email
 
 Сообщение:
-
 $message
 ";
 
-$headers  = "MIME-Version: 1.0\r\n";
+$headers = "From: no-reply@vvvgroup.ru\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$headers .= "From: VVV GROUP <no-reply@vvvgroup.ru>\r\n";
 
+// Отправка письма
 if (mail($to, $subject, $text, $headers)) {
 
-    echo json_encode([
-        "success" => true,
-        "message" => "Спасибо! Заявка успешно отправлена."
-    ]);
+    echo "<script>
+        alert('Спасибо! Ваша заявка успешно отправлена.');
+        window.history.back();
+    </script>";
 
 } else {
 
-    echo json_encode([
-        "success" => false,
-        "message" => "Ошибка отправки."
-    ]);
+    echo "<script>
+        alert('Ошибка отправки. Попробуйте позже.');
+        window.history.back();
+    </script>";
 
 }
+
+?>

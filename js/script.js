@@ -1,19 +1,54 @@
-// ==============================
-// Плавная прокрутка по меню
-// ==============================
+/*=====================================
+VVV GROUP
+SCRIPT
+=====================================*/
+
+// Кнопка "Наверх"
+
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+
+        scrollTopBtn.style.display = "flex";
+
+    } else {
+
+        scrollTopBtn.style.display = "none";
+
+    }
+
+});
+
+scrollTopBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+// Плавная прокрутка
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.addEventListener("click", function (e) {
 
+        e.preventDefault();
+
         const target = document.querySelector(this.getAttribute("href"));
 
         if (target) {
 
-            e.preventDefault();
-
             target.scrollIntoView({
+
                 behavior: "smooth"
+
             });
 
         }
@@ -22,11 +57,9 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 });
 
-// ==============================
-// Анимация появления блоков
-// ==============================
+// Появление блоков
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
@@ -38,8 +71,6 @@ const observer = new IntersectionObserver((entries) => {
 
     });
 
-}, {
-    threshold: 0.2
 });
 
 document.querySelectorAll("section").forEach(section => {

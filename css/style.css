@@ -162,21 +162,31 @@ HEADER
 
 }
 
+/*==========================
+LOGO
+==========================*/
+
 .logo{
 
-    font-size:34px;
+    display:flex;
 
-    color:#fff;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-weight:700;
+    align-items:center;
 
 }
 
-.logo span{
+.logo img{
 
-    color:var(--gold);
+    width:180px;
+
+    height:auto;
+
+    transition:.3s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
 
 }
 

@@ -227,3 +227,61 @@ HEADER
     border-radius:5px;
 
 }
+
+/*=====================================
+HERO
+=====================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(5,5,5,.75),rgba(5,5,5,.75)),
+    url("../images/hero.jpg") center/cover no-repeat;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    color:#fff;
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+    color:#d5d5d5;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}

@@ -273,3 +273,33 @@ CONTACTS
     }
 
 }
+
+/*=====================================
+FOOTER
+=====================================*/
+
+@media(max-width:768px){
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .footer-logo img{
+
+        margin:0 auto 20px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
